@@ -48,5 +48,6 @@
   },
   "devDependencies": {
     "web-vitals": "^2.1.2"
-  }
+  },
+  "homepage": "https://schiafang.github.io/taiwan-tourist-attractions/"
 }
