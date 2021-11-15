@@ -25,6 +25,51 @@ export const SliderGrid = styled.div`
   }
 `
 
+export const CardsContainer = styled.div`
+  ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 100px 0;
+  }
+
+  li {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #65895f;
+    margin: 0 6px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background: #65895f20;
+  }
+
+  li.active {
+    border: 1px solid #65895f;
+  }
+
+  .disabled,
+  .disabled:hover {
+    background-color: #e5e5e5;
+    opacity: 0.5;
+    cursor: default;
+
+    svg {
+      fill: #ffffff;
+    }
+  }
+`
+
 export const ResponsiveGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
