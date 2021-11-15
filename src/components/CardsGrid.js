@@ -36,7 +36,9 @@ const CardGrid = ({ children, slider = true }) => {
   }, [children])
 
   useEffect(() => {
-    setData(children.slice(startDataIndex - 1, endDataIndex))
+    if (children) {
+      setData(children?.slice(startDataIndex - 1, endDataIndex))
+    }
   }, [pagination])
 
   return slider ? (
