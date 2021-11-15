@@ -13,6 +13,7 @@ export const CardWrapper = styled.div`
 
   @media ${breakpoints.desktop} {
     padding: 0;
+    max-width: 100%;
   }
 `
 

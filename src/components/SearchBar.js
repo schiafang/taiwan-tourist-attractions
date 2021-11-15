@@ -8,6 +8,7 @@ import * as actions from '../slices/tourism'
 import { setLoadingStatus } from '../slices/status'
 import cityList from '../utilities/city'
 import searchIcon from '../assets/search.svg'
+import closeIcon from '../assets/close.svg'
 
 const SearchBar = () => {
   const dispatch = useDispatch()
@@ -28,7 +29,7 @@ const SearchBar = () => {
       result = await fetch.getFilterData({
         type,
         params: {
-          $top: 30,
+          $top: 120,
           $filter: `contains(Name, '${conditions.keyword}')`,
         },
       })
@@ -37,6 +38,7 @@ const SearchBar = () => {
         type,
         city: conditions.city,
         params: {
+          $top: 120,
           $filter: `contains(Name, '${conditions.keyword}')`,
         },
       })
@@ -76,6 +78,7 @@ const SearchBar = () => {
         <input
           value={search.keyword}
           placeholder='你想去哪裡？請輸入關鍵字'
+          onKeyDown={(e) => e.keyCode === 13 && handleSearchSubmit(search)}
           onChange={(e) =>
             setSearch((pre) => ({
               ...pre,

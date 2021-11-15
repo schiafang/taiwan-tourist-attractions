@@ -1,6 +1,7 @@
 import * as S from '../styles/components/cardHorizontal'
 import defaultThumbnail from '../assets/default-thumbnail.png'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { formatDate } from '../utilities/helpers'
 
 const CardHorizontal = ({
   title,
@@ -9,12 +10,6 @@ const CardHorizontal = ({
   position = { PositionLat: null, PositionLon: null },
 }) => {
   const [city, setCity] = useState('')
-
-  function formatDate(date) {
-    const newDate = new Date(date)
-
-    return newDate.toLocaleDateString('zh-TW')
-  }
 
   return (
     <S.CardWrapper>

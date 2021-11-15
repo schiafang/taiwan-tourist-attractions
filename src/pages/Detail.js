@@ -154,7 +154,9 @@ const Detail = () => {
           ]}
         />
 
-        <CoverSlider image={data.Picture} />
+        <CoverSlider
+          images={Object.keys(data.Picture).length > 0 ? [data.Picture] : null}
+        />
 
         <section>
           <h1 className='section-title'></h1>

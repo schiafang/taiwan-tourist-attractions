@@ -14,6 +14,6 @@ export const Spinner = styled.div`
   }
 
   span {
-    margin: 25vh auto;
+    margin: auto;
   }
 `

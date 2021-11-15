@@ -1,6 +1,8 @@
 import styled, { breakpoints } from '../config'
 
-export const SearchPageWrapper = styled.div``
+export const SearchPageWrapper = styled.div`
+  min-height: 80vh;
+`
 
 export const Title = styled.div`
   display: flex;

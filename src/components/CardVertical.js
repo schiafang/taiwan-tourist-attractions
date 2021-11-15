@@ -8,7 +8,11 @@ const CardVertical = ({ ID, type, title, image, city }) => {
     <Link to={`/detail/${type}/${ID}`}>
       <S.CardWrapper>
         <S.CardImage>
-          <img className='thumbnail' src={image ? image : defaultImage} />
+          <img
+            className='thumbnail'
+            src={image ? image : defaultImage}
+            onError={(e) => (e.target.src = defaultImage)}
+          />
         </S.CardImage>
 
         <S.CardContent>

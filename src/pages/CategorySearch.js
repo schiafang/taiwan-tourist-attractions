@@ -22,7 +22,7 @@ const CategorySearch = () => {
     let result = await fetch.getFilterData({
       type,
       params: {
-        $top: 30,
+        $top: 60,
         $filter:
           type === 'Restaurant'
             ? `contains(Class, '${category}')`
@@ -57,7 +57,7 @@ const CategorySearch = () => {
       </S.Title>
 
       <S.ResultArea>
-        {!data.length > 0 ? (
+        {!data || data.length === 0 ? (
           <NoDataFound />
         ) : (
           <CardsGrid slider={false}>

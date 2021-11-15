@@ -24,12 +24,12 @@ function App() {
   const getInitialData = async () => {
     dispatch(setLoadingStatus(true))
     const scenicSpots = await fetch.getAllScenicSpots({
-      params: { $top: 30 },
+      params: { $top: 60 },
     })
     const restaurants = await fetch.getAllRestaurants({
-      params: { $top: 30 },
+      params: { $top: 60 },
     })
-    const activities = await fetch.getAllActivities({ params: { $top: 30 } })
+    const activities = await fetch.getAllActivities({ params: { $top: 60 } })
 
     dispatch(
       actions.createInitialData({

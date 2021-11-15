@@ -136,7 +136,7 @@ export const InfoMap = styled.iframe`
     grid-area: map;
     justify-self: start;
     width: 100%;
-    height: 250px;
+    height: 100%;
   }
 `
 

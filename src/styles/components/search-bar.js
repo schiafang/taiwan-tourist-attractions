@@ -21,6 +21,7 @@ export const SearchBarWrapper = styled(FilterContanier)`
       border: none;
       color: #7f977b;
       letter-spacing: 0.03em;
+      font-size: 0.8em;
     }
   }
 

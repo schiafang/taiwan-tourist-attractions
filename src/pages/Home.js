@@ -11,6 +11,20 @@ import CardVertical from '../components/CardVertical'
 import SectionHeader from '../components/SectionHeader'
 import CardsGrid from '../components/CardsGrid'
 
+import homeppageCover01 from '../assets/ScenicSpotPicture01.png'
+import homeppageCover02 from '../assets/ScenicSpotPicture02.png'
+
+const homePageSlider = [
+  {
+    PictureUrl: homeppageCover01,
+    PictureDescription: '新北市 | 不厭亭',
+  },
+  {
+    PictureUrl: homeppageCover02,
+    PictureDescription: '',
+  },
+]
+
 function Home() {
   const { Activity, Restaurant, ScenicSpot } = useSelector(
     (state) => state.tourism
@@ -19,7 +33,7 @@ function Home() {
   return (
     <div>
       <Banner />
-      <CoverSlider />
+      <CoverSlider images={homePageSlider} showText={true} />
       <S.DisplaySection>
         <SectionHeader
           title='近期活動'
@@ -32,6 +46,7 @@ function Home() {
             Array.from({ length: 4 }, (v, i) => {
               const event = Activity[i]
               const { ID, Name, StartTime, EndTime, Position } = event
+
               return (
                 <Link key={ID} to={`/detail/Activity/${ID}`}>
                   <CardHorizontal
