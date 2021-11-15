@@ -234,7 +234,7 @@ const Detail = () => {
           <SectionHeader
             title={`還有這些不能錯過的${typeTitle[type]}`}
             linktitle={`更多${data.City ? data.City : ''}${typeTitle[type]}`}
-            to='/'
+            to={null}
           />
         </section>
 
